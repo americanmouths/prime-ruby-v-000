@@ -1,7 +1,11 @@
 # Add  code here!
 def prime?(num)
-  array = (2..num).to_a
-  return false if num < 2
-  number = array.find {|i| num % i == 0}
-  !number
+  array = (2..num-1).to_a
+if array.any? {|number| num % number == 0}
+  return false
+elsif number <= 1
+  return false
+else
+  return true
+end
 end
