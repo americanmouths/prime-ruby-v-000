@@ -1,7 +1,7 @@
 # Add  code here!
-def prime?(number)
-  (2..number-1).each do |num|
-    return false if number % num == 0 || num.negative?
-end
-  true
+def prime?(num)
+  array = (2..num).to_a
+  return false if num < 2
+  number = array.find {|i| num % i == 0}
+  !number
 end
