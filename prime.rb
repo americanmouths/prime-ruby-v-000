@@ -1,9 +1,9 @@
 # Add  code here!
 def prime?(number)
-  prime_number = number.to_a
-  if prime_number.any? {|i| number % i == 0 }
-    true
-  else
+  return false if number < 2
+  return true if number == 3 || number == 2
+  if (2..number-1).any?{|i| number % 1 == 0}
     false
-  end
+  else
+    true
 end
