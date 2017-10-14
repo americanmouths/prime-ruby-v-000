@@ -1,10 +1,7 @@
 # Add  code here!
 def prime?(number)
-  if number < 2
-    false
-  elsif number == 3 || number == 2
-    true
-  elsif (2..number-1).any?{|i| number % i == 0}
+  prime_numbers = number.to_a
+  if prime_numbers.any?{|i| number % i == 0 || number % i == i}
     true
   else
     false
