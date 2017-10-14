@@ -1,8 +1,7 @@
 # Add  code here!
 def prime?(number)
-  if number.any?{|i| number % i == 0 || number % i == i}
-    true
-  else
-    false
+  (2..number).each do |num|
+    return false if num % number == 0
 end
+  true
 end
